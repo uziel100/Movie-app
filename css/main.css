@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+.header--container{
+    width: 90%;
+    min-width: 300px;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+
+.header__icons{    
+    margin: 48px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__icon{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+.header__icon--menu{
+    background-image: url(../assets/icons/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+}
+
+.header__icon--search{
+    background-image: url(../assets/icons/icon-search.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+}
+
+.header__icon--arrow-left{
+    position: absolute;
+    top: 4rem;
+    left: 5%;
+    background-image: url(../assets/icons/icon-arrow-left.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+}
+
+.header__categories{    
+    min-width: 300px;
+    max-width: 768px;
+    overflow-x: auto;
+}
+
+.categories{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 48px;
+}
+
+.category__item{
+    list-style: none;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    font-weight: 600;
+    color: #B8B9C5;    
+    flex-shrink: 0;  
+    cursor: pointer;
+}
+
+
+.category__item--active{
+    color: #12153D;        
+}
+
+.category__item--active::after{
+    display: block;
+    width: 40px;
+    height: 6px;
+    border-radius: 100px;
+    margin-top: 16px;
+    background-color: #FE6D8E;
+    content: '';
+}
+
+.subcategories{
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    gap: 20px;
+    overflow-x: auto;    
+}
+
+.subcategory__item{
+    list-style: none;    
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+    padding: 0.4rem 2.2rem;
+    color: #434670;
+}
+
+.button{        
+    border: 1.5px solid #DCDCE2;    
+    border-radius: 50px;
+}
+
+/*  */
+.slider-movies{
+    margin: 72px auto 48px;
+    width: 90%;
+    min-width: 300px;
+    max-width: 768px;
+    display: flex;
+    overflow-x: auto;
+    gap: 40px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.card-movie{
+    scroll-snap-align: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.card-movie__image img{
+    border-radius: 50px;
+    box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-movie__body{
+    margin-top: 36px;
+}
+
+.card-movie__title{
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: #12153D;
+}
+
+.card-movie__score{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.2rem;  
+    margin-top: 12px;  
+}
+
+.card-movie__icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+
+.card-movie__icon--star{
+    background-image: url(../assets/icons/icon-star.svg);
+}
+
+.card-movie__icon--unstar{
+    background-image: url(../assets/icons/icon-unstart.svg);
+}
+
+.card-movie__icon--score{
+    background-color: #51CF66;
+    width: 4rem;
+    height: 3.2rem;
+    border-radius: 2px;
+    text-align: center;
+    padding: 6px;
+    font-size: 14px;
+    color: #fff;    
+}
+
+.card-movie__icon--md{
+    width: 32px;
+    height: 32px;
+}
+
+
+/* page 2 */
+.header__movie-img{
+    width: 100%;
+    min-width: 300px;
+    height: 350px;
+    background-image: url(../assets/images/cover-movie-content.jpg);
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-position: center;
+    position: relative;
+}
+.header__movie-img--score{
+    width: 90%;
+    min-width: 280px;
+    max-width: 500px;
+    height: 110px;
+    background-color: #fff;
+    box-shadow: 0px 5px 50px rgba(18, 21, 61, 0.2);
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    border-radius: 50px 0 0 50px;
+    display: flex;
+    justify-content: space-between;    
+    align-items: flex-start;    
+    padding: 16px 20px 16px 40px;    
+}
+
+.movie-score-detail{
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.movie-score-detail__title{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin: 8px 0 3px;
+    font-weight: 600;
+    color: #12153D;
+}
+
+.movie-score-detail__desc{
+    color: #9A9BB2;
+    font-size: 1.2rem;
+}
+
+/*  */
+
+.movie-title-container{    
+    margin: 100px auto 48px;
+    width: 90%;
+    min-width: 300px;
+    max-width: 768px;
+}
+.movie-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.movie__title{
+    font-size: 3.2rem;  
+    font-weight: 600;
+    line-height: 3.9rem;
+    color: #12153D;   
+    margin-bottom: 8px; 
+}
+
+.movie__date,
+.movie__key,
+.movie__time-duration{
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #9A9BB2;
+}
+.button__movie-add{
+    width: 64px;
+    height: 64px;
+    background-color: #FE6D8E;
+    /* padding: 18px; */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 3.6rem;
+    cursor: pointer;
+}
+
+.movie-category{
+    margin-top: 20px;    
+    display: flex;
+    overflow-x: auto;    
+}
+.movie-category .subcategory__item{
+    font-size: 1.6rem;
+    margin-right: 1.2rem;
+}
+.movie-summary{
+    margin: 0 auto;
+    width: 90%;
+    min-width: 300px;
+    max-width: 768px;
+}
+
+.movie-summary__title{
+    color: #12153D;
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+
+.movie-summary__desc{
+    font-size: 1.6rem;
+    color: #737599;
+    font-weight: 400;
+    line-height: 2.4rem;    
+    margin-top: 1.6rem;
+}
+
+.movie-actors{
+    margin: 48px auto ;
+    width: 90%;
+    min-width: 300px;
+    max-width: 768px;
+}
+
+.movie-actors h2{
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: #12153D;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+}
+
+.movie-actors-row{
+    display: flex;
+    gap: 2.8rem;
+    overflow-x: auto;
+}
+
+.movie-actors__avatar{
+    text-align: center;
+}
+.actor__name{    
+    margin-top: 1.2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;    
+    color: #12153D;
+}
+
+.actor__stand{    
+    margin-top: 0.4rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #9A9BB3;
+}
